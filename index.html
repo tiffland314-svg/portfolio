@@ -1,7 +1,4 @@
 <title>林彤作品集</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 /* Layout concept: slide-like sections stacked on a dark ground, giant tight coral headings left, content right, small white section label top-right, red hand-drawn-style ellipses on key labels. */
 :root {
@@ -11,8 +8,8 @@
   --muted: #c4c6ca;
   --coral: #ef5350;
   --line: #34363a;
-  --font-display: "Archivo", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Arial Black", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-body: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -110,12 +107,26 @@ a { color: inherit; }
 .light-bg { background: #d9dadc; padding: clamp(0.8rem, 2vw, 1.6rem); border-radius: 4px; }
 
 .brief { min-width: 0; }
-.brief h3 { margin: 0 0 0.3rem; font-size: 1.15rem; font-weight: 700; }
+.brief h3 { margin: 0 0 0.3rem; font-size: 1.15rem; font-weight: 700; color: var(--coral); }
+.hl { color: var(--coral); }
+.cap.left { text-align: left; }
 .brief p { margin: 0 0 0.4rem; }
 .brief section + section { margin-top: 1.8rem; }
 mark { background: rgba(255,255,255,0.26); color: var(--ink); padding: 0.05em 0.15em; }
 .mag { grid-template-columns: minmax(220px, 0.8fr) 1.6fr; align-items: start; }
 
+
+.install { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+.legend { margin: 2rem 0 0; padding-left: 1.6rem; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.06em; }
+.legend li { padding-left: 0.2rem; }
+.device { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); align-items: start; }
+.fig { margin: 0; min-width: 0; }
+.fig .note { margin: 1rem 0 0; text-align: center; font-size: 0.95rem; }
+.states { display: grid; gap: 0.8rem; min-width: 0; }
+.state { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 11rem); gap: 1rem; align-items: center; }
+.state figcaption { font-size: 0.95rem; text-align: center; }
+.arrow { text-align: center; color: var(--coral); font-size: 1.8rem; line-height: 1; font-weight: 700; }
+.game { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; }
 .cookie { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 980px; }
 .motion { grid-template-columns: 1.7fr 1fr; align-items: center; }
 .motion .text p { margin: 0 0 2.5rem; }
@@ -152,7 +163,19 @@ footer { color: var(--muted); font-size: 0.8rem; padding-block: 1.5rem 2.5rem; b
   .toc .rule { height: 1px; width: 100%; }
   .intro { grid-template-columns: 1fr; }
   .id-card { max-width: 340px; }
-  .mag, .motion, .cookie { grid-template-columns: 1fr; }
+  .mag, .motion, 
+.install { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+.legend { margin: 2rem 0 0; padding-left: 1.6rem; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.06em; }
+.legend li { padding-left: 0.2rem; }
+.device { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); align-items: start; }
+.fig { margin: 0; min-width: 0; }
+.fig .note { margin: 1rem 0 0; text-align: center; font-size: 0.95rem; }
+.states { display: grid; gap: 0.8rem; min-width: 0; }
+.state { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 11rem); gap: 1rem; align-items: center; }
+.state figcaption { font-size: 0.95rem; text-align: center; }
+.arrow { text-align: center; color: var(--coral); font-size: 1.8rem; line-height: 1; font-weight: 700; }
+.game { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; }
+.cookie { grid-template-columns: 1fr; }
   .mag .shot { max-width: 360px; }
   .nav .brand { display: none; }
   .nav ul { margin-left: 0; }
@@ -161,7 +184,19 @@ footer { color: var(--muted); font-size: 0.8rem; padding-block: 1.5rem 2.5rem; b
 @media (max-width: 560px) {
   .pair.keep { grid-template-columns: 1fr; }
   .work-photos, .sheets, .portraits { grid-template-columns: 1fr; }
-  .cookie { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  
+.install { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+.legend { margin: 2rem 0 0; padding-left: 1.6rem; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.06em; }
+.legend li { padding-left: 0.2rem; }
+.device { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); align-items: start; }
+.fig { margin: 0; min-width: 0; }
+.fig .note { margin: 1rem 0 0; text-align: center; font-size: 0.95rem; }
+.states { display: grid; gap: 0.8rem; min-width: 0; }
+.state { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(7rem, 11rem); gap: 1rem; align-items: center; }
+.state figcaption { font-size: 0.95rem; text-align: center; }
+.arrow { text-align: center; color: var(--coral); font-size: 1.8rem; line-height: 1; font-weight: 700; }
+.game { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; }
+.cookie { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -251,16 +286,16 @@ footer { color: var(--muted); font-size: 0.8rem; padding-block: 1.5rem 2.5rem; b
             <h3>项目背景</h3>
             <p>在疫情期间入学的大学生因长期线上教学与社交限制，彼此之间的交流机会明显减少。</p>
             <p>当新生询问大学附近的休闲去处时，不少高年级学生难以给出清晰、可靠的推荐。</p>
-            <p>这不仅反映出<mark>校园生活记忆的断层</mark>，也暴露出<mark>校园周边消费文化传播</mark>的不足。</p>
+            <p>这不仅反映出校园生活记忆的断层，也暴露出校园周边消费文化传播的不足。</p>
           </section>
           <section>
             <h3>设计目标</h3>
-            <p>本项目拟制作一本宣传册，聚焦成均馆大学步行10分钟范围内的6家生啤酒店铺，通过系统梳理校园周边夜生活与休闲消费资源，为学生提供<mark>实用指南</mark>。</p>
-            <p>同时，以<mark>“支持自营业商家的经济复苏”</mark>为重要目标，在内容策划中兼顾文化记录与现实关怀，提升店铺曝光度，助力受到冲击的个体商户恢复活力。</p>
+            <p>本项目拟制作一本<strong>宣传册</strong>，<span class="hl">聚焦成均馆大学步行10分钟范围内的6家生啤酒店铺，系统梳理校园周边夜生活与休闲消费资源。</span></p>
+            <p>同时，以“支持自营业商家的经济复苏”为重要目标，在内容策划中兼顾文化记录与现实关怀，提升店铺曝光度，助力受到冲击的个体商户恢复活力。</p>
           </section>
           <section>
             <h3>项目结果</h3>
-            <p>杂志将围绕生啤酒这一核心载体，从口感、香气、碳酸感等维度建立统一评价体系，对各店主打生啤进行专业化、多角度测评，结合空间氛围与消费体验，呈现成均馆大学周边真实而有温度的夜间生活图景，实现<mark>校园文化传播与地方小商户经济支持</mark>的双重价值。</p>
+            <p>杂志将围绕生啤酒这一核心载体，从口感、香气、碳酸感等维度建立统一评价体系，对各店主打生啤进行专业化、多角度测评，结合空间氛围与消费体验，呈现成均馆大学周边真实而有温度的夜间生活图景。</p>
           </section>
         </div>
       </div>
@@ -272,14 +307,55 @@ footer { color: var(--muted); font-size: 0.8rem; padding-block: 1.5rem 2.5rem; b
 
     <article class="project">
       <h2 class="display">Design<br>Project</h2>
-      <div class="cols" style="grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:start">
-        <figure style="margin:0;min-width:0">
+      <p class="cap left">人与自然交互设计装置</p>
+      <div class="cols install">
+        <button class="shot" data-zoom="install.jpg" aria-label="放大查看装置现场"><img src="install.jpg" width="931" height="716" alt="人与自然交互设计装置现场：投影画面、电脑主机、植物、听诊器与观览者" loading="lazy" decoding="async"></button>
+        <div class="brief">
+          <p>作品以<span class="hl">“人类与植物虽是不同的生命体，却彼此相连”</span>为核心主题，通过<strong>心跳的可视化与听诊器</strong>这一连接媒介，展现人与植物在生命节奏上的共通性，传达<strong>生命平等、尊重自然与共生</strong>的理念。</p>
+          <p>同时，作品希望通过心跳与自然元素的互动，为观众带来平静与治愈的体验，引导人们重新感知自身与自然之间的联系。</p>
+          <ol class="legend">
+            <li>投影画面</li>
+            <li>电脑主机</li>
+            <li>植物</li>
+            <li>听诊器 （arduino心跳感应器）</li>
+            <li>观览者</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <h2 class="display">Design<br>Project</h2>
+      <div class="cols device">
+        <figure class="fig">
+          <figcaption class="cap">交互装置</figcaption>
+          <button class="shot" data-zoom="device.jpg" aria-label="放大查看交互装置"><img src="device.jpg" width="1280" height="1280" alt="交互装置：植物与环形灯、听诊器支架" loading="lazy" decoding="async"></button>
+          <p class="note">听诊器一侧插入植物土壤<br>一侧安装arduino心跳感应零件</p>
+        </figure>
+        <div class="states">
+          <figure class="state">
+            <button class="shot" data-zoom="heart-high.jpg" aria-label="放大查看画面"><img src="heart-high.jpg" width="1019" height="573" alt="观览者心跳过高时的基本待机画面" loading="lazy" decoding="async"></button>
+            <figcaption>观览者心跳过高时<br>（基本待机画面）</figcaption>
+          </figure>
+          <div class="arrow" aria-hidden="true">↓</div>
+          <figure class="state">
+            <button class="shot" data-zoom="heart-calm.jpg" aria-label="放大查看画面"><img src="heart-calm.jpg" width="1079" height="651" alt="观览者心跳平稳时植物快速生长的画面" loading="lazy" decoding="async"></button>
+            <figcaption>观览者心跳平稳时<br>（植物快速生长）</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <h2 class="display">Design<br>Project</h2>
+      <div class="cols game">
+        <figure class="fig">
           <figcaption class="cap">猫和老鼠桌游</figcaption>
           <button class="shot" data-zoom="boardgame.jpg" aria-label="放大查看桌游"><img src="boardgame.jpg" width="1800" height="1349" alt="猫和老鼠桌游棋盘、卡牌与棋子" loading="lazy" decoding="async"></button>
         </figure>
-        <figure style="margin:0;min-width:0">
-          <figcaption class="cap">兔年月历</figcaption>
-          <button class="shot" data-zoom="calendar.jpg" aria-label="放大查看月历"><img src="calendar.jpg" width="842" height="1191" alt="兔年月历 1月页面" loading="lazy" decoding="async"></button>
+        <figure class="fig">
+          <figcaption class="cap">独立确定整体设计风格</figcaption>
+          <button class="shot" data-zoom="style-guide.jpg" aria-label="放大查看设计风格"><img src="style-guide.jpg" width="1056" height="1188" alt="猫和老鼠桌游整体设计概念：主色、字体、棋盘与棋子设计" loading="lazy" decoding="async"></button>
         </figure>
       </div>
     </article>
@@ -287,7 +363,7 @@ footer { color: var(--muted); font-size: 0.8rem; padding-block: 1.5rem 2.5rem; b
     <article class="project">
       <h2 class="display">illustration<br>Design</h2>
       <div class="cols cookie">
-        <button class="shot" data-zoom="cookie-small.jpg" aria-label="放大查看插画"><img src="cookie-small.jpg" width="842" height="1191" alt="COOKIE the major types 插画海报" loading="lazy" decoding="async"></button>
+        <button class="shot" data-zoom="calendar.jpg" aria-label="放大查看月历"><img src="calendar.jpg" width="842" height="1191" alt="兔年月历 1月页面" loading="lazy" decoding="async"></button>
         <button class="shot" data-zoom="cookie-big.jpg" aria-label="放大查看插画"><img src="cookie-big.jpg" width="842" height="1191" alt="COOKIE the major types 配方版插画海报" loading="lazy" decoding="async"></button>
       </div>
     </article>
